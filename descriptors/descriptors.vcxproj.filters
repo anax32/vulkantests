@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="..\vulkan_descriptors.cpp" />
+    <ClCompile Include="..\common\utils.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="common">
+      <UniqueIdentifier>{a3187793-a9e8-421e-b39b-6c892066dd7a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\vk_descriptor_pool.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\vk_descriptor_set_layout.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\vk_descriptor_set.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\utils.h">
+      <Filter>common</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

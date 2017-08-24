@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="common">
+      <UniqueIdentifier>{1e4b04a8-ae0a-4b52-9126-cfb67e80fbf9}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\common\utils.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\vulkan_compute_shader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\common\utils.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\vk_shader_module.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\vk_logical_device.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\vk_queue.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\vk_physical_device.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\common\vk_pipeline_layout.h">
+      <Filter>common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shader.comp" />
+  </ItemGroup>
+</Project>

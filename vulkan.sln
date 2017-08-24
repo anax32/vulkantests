@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "enumerate_devices", "enumerate_devices\enumerate_devices.vcxproj", "{F3E6C681-A162-4A12-B086-8FED154412A5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{1B428C56-4AC2-4FD5-83F4-7B57C673DB85}"
+	ProjectSection(SolutionItems) = preProject
+		common\utils.cpp = common\utils.cpp
+		common\utils.h = common\utils.h
+		common\vk_alloc_buffer.h = common\vk_alloc_buffer.h
+		common\vk_bind_buffer_memory.h = common\vk_bind_buffer_memory.h
+		common\vk_buffer.h = common\vk_buffer.h
+		common\vk_command_buffer.h = common\vk_command_buffer.h
+		common\vk_command_pool.h = common\vk_command_pool.h
+		common\vk_descriptor_pool.h = common\vk_descriptor_pool.h
+		common\vk_descriptor_set.h = common\vk_descriptor_set.h
+		common\vk_descriptor_set_layout.h = common\vk_descriptor_set_layout.h
+		common\vk_extensions.h = common\vk_extensions.h
+		common\vk_instance.h = common\vk_instance.h
+		common\vk_layers.h = common\vk_layers.h
+		common\vk_logical_device.h = common\vk_logical_device.h
+		common\vk_memory_allocation.h = common\vk_memory_allocation.h
+		common\vk_physical_device.h = common\vk_physical_device.h
+		common\vk_pipeline_layout.h = common\vk_pipeline_layout.h
+		common\vk_queue.h = common\vk_queue.h
+		common\vk_result.h = common\vk_result.h
+		common\vk_shader_module.h = common\vk_shader_module.h
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "find_matching_physical_device", "find_matching_physical_device\find_matching_physical_device.vcxproj", "{F0DF0BA9-0AD1-4EC3-84CD-DA4316DC3570}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "compute_shader", "compute_shader\compute_shader.vcxproj", "{EA8C1473-2CB3-4CBD-BD73-8E5708B1EFC9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "descriptors", "descriptors\descriptors.vcxproj", "{12E4D21F-0DC7-4602-94DF-C72796EA87C7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "buffer", "buffer\buffer.vcxproj", "{3ABFEDDA-175A-4BEF-BB6D-65999050993F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "memory_copy", "memory_copy\memory_copy.vcxproj", "{C0BC9018-DEA1-44F8-8350-78E0A7D8DA85}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "instance", "instance\instance.vcxproj", "{EB9C7BC4-0655-42B3-85AB-C71AACCFE40B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "memory_allocate", "memory_allocate\memory_allocate.vcxproj", "{B774F61F-740A-413D-BEA3-1C4207E61201}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3E6C681-A162-4A12-B086-8FED154412A5}.Debug|x64.ActiveCfg = Debug|x64
+		{F3E6C681-A162-4A12-B086-8FED154412A5}.Debug|x64.Build.0 = Debug|x64
+		{F3E6C681-A162-4A12-B086-8FED154412A5}.Release|x64.ActiveCfg = Release|x64
+		{F3E6C681-A162-4A12-B086-8FED154412A5}.Release|x64.Build.0 = Release|x64
+		{F0DF0BA9-0AD1-4EC3-84CD-DA4316DC3570}.Debug|x64.ActiveCfg = Debug|x64
+		{F0DF0BA9-0AD1-4EC3-84CD-DA4316DC3570}.Debug|x64.Build.0 = Debug|x64
+		{F0DF0BA9-0AD1-4EC3-84CD-DA4316DC3570}.Release|x64.ActiveCfg = Release|x64
+		{F0DF0BA9-0AD1-4EC3-84CD-DA4316DC3570}.Release|x64.Build.0 = Release|x64
+		{EA8C1473-2CB3-4CBD-BD73-8E5708B1EFC9}.Debug|x64.ActiveCfg = Debug|x64
+		{EA8C1473-2CB3-4CBD-BD73-8E5708B1EFC9}.Debug|x64.Build.0 = Debug|x64
+		{EA8C1473-2CB3-4CBD-BD73-8E5708B1EFC9}.Release|x64.ActiveCfg = Release|x64
+		{EA8C1473-2CB3-4CBD-BD73-8E5708B1EFC9}.Release|x64.Build.0 = Release|x64
+		{12E4D21F-0DC7-4602-94DF-C72796EA87C7}.Debug|x64.ActiveCfg = Debug|x64
+		{12E4D21F-0DC7-4602-94DF-C72796EA87C7}.Debug|x64.Build.0 = Debug|x64
+		{12E4D21F-0DC7-4602-94DF-C72796EA87C7}.Release|x64.ActiveCfg = Release|x64
+		{12E4D21F-0DC7-4602-94DF-C72796EA87C7}.Release|x64.Build.0 = Release|x64
+		{3ABFEDDA-175A-4BEF-BB6D-65999050993F}.Debug|x64.ActiveCfg = Debug|x64
+		{3ABFEDDA-175A-4BEF-BB6D-65999050993F}.Debug|x64.Build.0 = Debug|x64
+		{3ABFEDDA-175A-4BEF-BB6D-65999050993F}.Release|x64.ActiveCfg = Release|x64
+		{3ABFEDDA-175A-4BEF-BB6D-65999050993F}.Release|x64.Build.0 = Release|x64
+		{C0BC9018-DEA1-44F8-8350-78E0A7D8DA85}.Debug|x64.ActiveCfg = Debug|x64
+		{C0BC9018-DEA1-44F8-8350-78E0A7D8DA85}.Debug|x64.Build.0 = Debug|x64
+		{C0BC9018-DEA1-44F8-8350-78E0A7D8DA85}.Release|x64.ActiveCfg = Release|x64
+		{C0BC9018-DEA1-44F8-8350-78E0A7D8DA85}.Release|x64.Build.0 = Release|x64
+		{EB9C7BC4-0655-42B3-85AB-C71AACCFE40B}.Debug|x64.ActiveCfg = Debug|x64
+		{EB9C7BC4-0655-42B3-85AB-C71AACCFE40B}.Debug|x64.Build.0 = Debug|x64
+		{EB9C7BC4-0655-42B3-85AB-C71AACCFE40B}.Release|x64.ActiveCfg = Release|x64
+		{EB9C7BC4-0655-42B3-85AB-C71AACCFE40B}.Release|x64.Build.0 = Release|x64
+		{B774F61F-740A-413D-BEA3-1C4207E61201}.Debug|x64.ActiveCfg = Debug|x64
+		{B774F61F-740A-413D-BEA3-1C4207E61201}.Debug|x64.Build.0 = Debug|x64
+		{B774F61F-740A-413D-BEA3-1C4207E61201}.Release|x64.ActiveCfg = Release|x64
+		{B774F61F-740A-413D-BEA3-1C4207E61201}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
