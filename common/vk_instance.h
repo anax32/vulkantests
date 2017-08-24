@@ -12,7 +12,7 @@ protected:
 #ifdef vk_layers_h
 	std::map<std::string, vk_layer_base*>		layers;
 
-	void append_layers(VkInstanceCreateInfo& info)
+	void append_layers(const VkInstanceCreateInfo& info)
 	{
 		// FIXME: lol
 	}
@@ -29,7 +29,7 @@ protected:
 #ifdef vk_extension_h
 	std::map<std::string, vk_extension_base*>	extensions;
 
-	void append_extensions(VkInstanceCreateInfo& info)
+	void append_extensions(const VkInstanceCreateInfo& info)
 	{
 		for (auto i = 0; i < info.enabledExtensionCount; i++)
 		{
@@ -57,7 +57,7 @@ protected:
 #endif
 
 public:
-	vk_instance(VkInstanceCreateInfo& info)
+	vk_instance(const VkInstanceCreateInfo& info)
 	{
 		result = vkCreateInstance(&info, NULL, &inst_);
 
@@ -77,9 +77,9 @@ public:
 							NULL,
 							0,
 							NULL,
-							layers.size(),
+							static_cast<uint32_t>(layers.size()),
 							layers.data(),
-							extensions.size(),
+							static_cast<uint32_t>(extensions.size()),
 							extensions.data()
 						})
 	{}

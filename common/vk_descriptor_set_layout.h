@@ -6,7 +6,7 @@ protected:
 	VkDescriptorSetLayout	layout_;
 
 public:
-	vk_descriptor_set_layout(VkDevice device, std::vector<VkDescriptorSetLayoutBinding>& bindings)
+	vk_descriptor_set_layout(VkDevice device, std::vector<VkDescriptorSetLayoutBinding> bindings)
 		: device_(device)
 	{
 		VkDescriptorSetLayoutCreateInfo create_info =
@@ -14,7 +14,7 @@ public:
 			VK_STRUCTURE_TYPE_DESCRIPTOR_SET_LAYOUT_CREATE_INFO,
 			NULL,
 			0,
-			bindings.size(),
+			static_cast<uint32_t>(bindings.size()),
 			bindings.data()
 		};
 
@@ -23,10 +23,6 @@ public:
 			&create_info,
 			NULL,
 			&layout_);
-	}
-	vk_descriptor_set_layout(VkDevice device, std::initializer_list<VkDescriptorSetLayoutBinding> bindings)
-		: vk_descriptor_set_layout(device, std::vector<VkDescriptorSetLayoutBinding>(bindings))
-	{
 	}
 	virtual ~vk_descriptor_set_layout()
 	{

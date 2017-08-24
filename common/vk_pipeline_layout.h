@@ -18,9 +18,9 @@ public:
 			VK_STRUCTURE_TYPE_PIPELINE_LAYOUT_CREATE_INFO,
 			NULL,
 			0,
-			descriptor_set_layouts.size(),
+			static_cast<uint32_t>(descriptor_set_layouts.size()),
 			descriptor_set_layouts.data(),
-			push_constant_ranges.size(),
+			static_cast<uint32_t>(push_constant_ranges.size()),
 			push_constant_ranges.data(),
 		};
 

@@ -1,0 +1,4 @@
+VulkanSDK/
+bin/
+*.o
+*.run
