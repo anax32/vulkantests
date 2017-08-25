@@ -16,16 +16,16 @@
 #include "common/vk_descriptor_pool.h"
 #include "common/vk_descriptor_set.h"
 
-int main(int argc, char **argv)
+int main (int argc, char **argv)
 {
-	vk_instance	inst({}, { VK_EXT_DEBUG_REPORT_EXTENSION_NAME });
+	vk_instance	inst;
 
-	auto gpus = find_matching_devices(inst,
+	auto gpus = find_matching_devices (inst,
 		VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU,
 		0,
 		0);
 
-	auto compute_queue = queue_families_with_any_properties(gpus.front(), VK_QUEUE_COMPUTE_BIT);
+	auto compute_queue = queue_families_with_any_properties (gpus.front (), VK_QUEUE_COMPUTE_BIT);
 
 	vk_logical_device			device (
 		inst,

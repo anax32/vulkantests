@@ -18,7 +18,7 @@
 
 int main(int argc, char **argv)
 {
-	vk_instance	inst({}, { VK_EXT_DEBUG_REPORT_EXTENSION_NAME });
+	vk_instance	inst;
 
 	auto gpus = find_matching_devices(inst,
 		VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU,

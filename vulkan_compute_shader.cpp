@@ -2,17 +2,6 @@
 #pragma comment(lib, "vulkan-1.lib")
 #endif
 
-#ifdef _DEBUG
-#ifndef DBG_NEW
-#define DBG_NEW new ( _NORMAL_BLOCK , __FILE__ , __LINE__ )
-#define new DBG_NEW
-#endif
-
-#define _CRTDBG_MAP_ALLOC
-#include <stdlib.h>
-#include <crtdbg.h>
-#endif
-
 #include <vulkan/vulkan.h>
 #include <iostream>
 #include <fstream>
@@ -89,11 +78,7 @@ public:
 
 int main(int argc, char **argv)
 {
-#ifdef _DEBUG
-	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
-#endif
-
-	vk_instance	inst({}, { VK_EXT_DEBUG_REPORT_EXTENSION_NAME });
+	vk_instance	inst;
 
 	auto gpus = find_matching_devices(inst,
 		VK_PHYSICAL_DEVICE_TYPE_DISCRETE_GPU,
