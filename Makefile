@@ -4,13 +4,22 @@ INCLUDE = -I$(VULKAN_SDK)/include
 LDLIBS = -L$(VULKAN_SDK)/lib -lvulkan
 
 SOURCES=$(wildcard *.cpp)
-OUTS=$(addprefix bin/,$(notdir $(SOURCES:.cpp=.o)))
+OUT_DIR=bin/
+OUTS=$(addprefix $(OUT_DIR), $(notdir $(SOURCES:.cpp=.o)))
+
+bin/:
+	mkdir -p $(OUT_DIR)
 
 bin/%.o: %.cpp
 	$(CXX) $(CXXFLAGS) $(INCLUDE) $^ common/utils.cpp $(LDLIBS) -o $@
 
-all : $(SOURCES) $(OUTS)
+all : $(OUT_DIR) $(SOURCES) $(OUTS)
+
+test : all
+	for i in $(OUT_DIR)*; do echo $$i && $$i; done
+
+grind: all
+	for i in $(OUT_DIR)*; do valgrind $$i; done
 
 clean:
-	$(RM) bin/*
-	$(RM) *.o
+	rm -dr $(OUT_DIR)
