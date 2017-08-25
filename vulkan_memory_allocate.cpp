@@ -17,9 +17,9 @@
 typedef struct allocation_record_s
 {
 	void*			location;
-	size_t			size;
-	unsigned int	aquisition_time;
-	unsigned int	release_time;
+	size_t		size;
+	clock_t   aquisition_time;
+	clock_t   release_time;
 } allocation_record_t;
 
 typedef std::map<void*, allocation_record_t> allocation_record_list_t;
@@ -41,9 +41,11 @@ void* memfn_alloc (void* user_data,
 
 	if (mem != NULL)
 	{
-		cntr->locations.insert(std::make_pair (mem, allocation_record_t { mem, size, clock(), 0 }));
+		cntr->locations.insert(
+      std::make_pair (
+        mem,
+        allocation_record_t { mem, size, clock(), 0 }));
 	}
-	
 	return mem;
 }
 
