@@ -37,8 +37,6 @@ void* memfn_alloc (void* user_data,
 	auto cntr = reinterpret_cast<allocation_counter_t*>(user_data);
 	auto mem = malloc(size);
 
-	std::cout << "alloc " << size << std::endl;
-
 	if (mem != NULL)
 	{
 		cntr->locations.insert(
@@ -166,13 +164,13 @@ int main(int argc, char **argv)
 
 	// display information about the memory
 	// output is <location> <size> <lifespan>
-	for (auto mem : instance_allocation_counter.locations)
+/*	for (auto mem : instance_allocation_counter.locations)
 	{
 		std::cout << mem.first << " ";
 		std::cout << mem.second.size << " ";
 		std::cout << mem.second.release_time - mem.second.aquisition_time << std::endl;
 	}
-
+*/
 	// total the amounts
 	auto host_size = std::accumulate(
 		std::begin(instance_allocation_counter.locations),
